@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+   
+}
+
+.piano {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.piano-keys-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.piano-keys {
+    width: 80px;
+    cursor: pointer;
+    position: relative;
+    height: 300px;
+    border: 1px solid #000;
+}
+
+.white-key {
+    background-color: #fff;
+}
+
+.black-key {
+    width: 30px;
+    height: 200px;
+    border-radius: 5px;
+    background-color: #000;
+    z-index: 2;
+    margin: 0 -20px 0 -20px;
+}
