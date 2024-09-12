@@ -26,6 +26,10 @@ body {
     border: 1px solid #000;
 }
 
+.piano-keys:hover {
+    background-color: #bb1291;
+}
+
 .white-key {
     background-color: #fff;
 }
@@ -38,3 +42,4 @@ body {
     z-index: 2;
     margin: 0 -20px 0 -20px;
 }
+
