@@ -1,52 +1,70 @@
+/* Basic reset for margin and padding, and ensures consistent box sizing across elements */
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: black;
-   
+    background-color: black; /* Sets the background color of the body to black */
 }
 
+/* Styles the piano container */
 .piano {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; /* Makes the piano container a flexbox to align its contents */
+    align-items: center; /* Vertically centers the piano keys within the container */
+    justify-content: center; /* Horizontally centers the piano keys within the container */
 }
 
+/* Styles the list that contains all the piano keys */
 .piano-keys-list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+    list-style: none; /* Removes default bullet points from the list */
+    display: flex; /* Displays list items (piano keys) in a row */
+    justify-content: center; /* Horizontally centers the piano keys within the list */
+    padding: 0; /* Removes default padding from the list */
 }
 
+/* Styles for each individual piano key */
 .piano-keys {
-    width: 80px;
-    cursor: pointer;
-    position: relative;
-    height: 300px;
-    border: 1px solid #000;
-}
-
-.piano-keys:hover {
-    background-color: #bb1291;
-}
-
-.white-key {
-    background-color: #fff;
-}
-
-.black-key {
-    width: 30px;
-    height: 200px;
-    border-radius: 5px;
-    background-color: #000;
-    z-index: 2;
-    margin: 0 -20px 0 -20px;
-}
-
-h1 {
-    color: white;
-    text-align: center;
-    font-size: 50px;
-    margin-top: 50px;
+    width: 80px; /* Sets the width of each piano key */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over a key */
+    position: relative; /* Allows for precise positioning of child elements (e.g., note text) */
+    height: 300px; /* Sets the height of the piano key */
+    border: 1px solid #000; /* Adds a black border to each key */
     
+    display: flex; /* Makes the key a flexbox to align its content */
+    align-items: flex-end; /* Aligns the text (note) at the bottom of the key */
+    justify-content: center; /* Centers the text (note) horizontally within the key */
+    padding-bottom: 10px; /* Adds space between the text (note) and the bottom of the key */
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's width and height */
+}
+
+/* Changes the background color of a piano key when hovered */
+.piano-keys:hover {
+    background-color: #bb1291; /* Sets the hover background color to a pinkish tone */
+}
+
+/* Styles for the white piano keys */
+.white-key {
+    background-color: #fff; /* Sets the background color of white keys to white */
+}
+
+/* Styles for the black piano keys */
+.black-key {
+    width: 30px; /* Sets the width of the black keys, narrower than white keys */
+    height: 200px; /* Sets the height of the black keys, shorter than white keys */
+    border-radius: 5px; /* Rounds the corners of the black keys */
+    background-color: #000; /* Sets the background color of black keys to black */
+    z-index: 2; /* Ensures black keys appear above white keys */
+    margin: 0 -20px 0 -20px; /* Adds negative margins to overlap black keys over white keys */
+    align-items: flex-end; /* Aligns the text (note) at the bottom of the black key */
+}
+
+/* Styles for the note text inside each key */
+#key-note {
+    text-align: center; /* Centers the text horizontally within the key */
+    font-size: 20px; /* Sets the font size of the note text */
+    color: black; /* Sets the text color to black (for white keys) */
+}
+
+/* Special styling for note text inside black keys */
+.black-key #key-note {
+    color: white; /* Changes the text color to white for better visibility on black keys */
 }
