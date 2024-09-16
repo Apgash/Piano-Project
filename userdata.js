@@ -8,6 +8,7 @@ function StoreUserInput(event) {
   pressedKeys.push(key);
   
   localStorage.setItem('pressedKeys', JSON.stringify(pressedKeys));
+  displayKeys.textContent = pressedKeys.join(', ');
 }
 
 pianoKeys.forEach(key => {
