@@ -68,3 +68,11 @@ body {
 .black-key #key-note {
     color: white; /* Changes the text color to white for better visibility on black keys */
 }
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 50px;
+    
+}
