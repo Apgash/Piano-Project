@@ -77,7 +77,7 @@ body {
 }
 
 /* Special styling for note text inside black keys */
-.black-key #key-note {
+#key-note-black {
     color: white; /* Changes the text color to white for better visibility on black keys */
 }
 
