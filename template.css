@@ -1,4 +1,16 @@
+header { 
+    background-image: url('https://images.pexels.com/photos/586415/pexels-photo-586415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 1x, https://images.pexels.com/photos/586415/pexels-photo-586415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2 2x'); /* Specify the path to your image */ 
+    background-size: cover; /* Ensures the image covers the entire header */ 
+    background-position: center; /* Centers the image within the header */ 
+    height: 100px; /* Set the height of the header as needed */ 
+    text-align: center; /* Optional: Aligns text/content within the header */ 
+    color: white; /* Optional: Text color */ 
+    font-size: 24px; /* Optional: Font size */ 
+    padding: 20px; /* Optional: Padding around content */ 
+  } 
+
 /* Basic reset for margin and padding, and ensures consistent box sizing across elements */
+
 body {
     margin: 0;
     padding: 0;
@@ -68,3 +80,39 @@ body {
 .black-key #key-note {
     color: white; /* Changes the text color to white for better visibility on black keys */
 }
+
+/*Button style for play Button */
+.styled {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    margin-right: -50%;
+    top: 75%;
+    left: 50%;
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    background-color: Green;
+    background-image: linear-gradient(
+      to top left,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 0)
+    );
+    box-shadow:
+      inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+      inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+  .styled:hover {
+    background-color: Green;
+  }
+  
+  .styled:active {
+    box-shadow:
+      inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+  }
