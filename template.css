@@ -1,31 +1,31 @@
+/* Header styling */
 header { 
-    background-image: url('https://images.pexels.com/photos/586415/pexels-photo-586415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 1x, https://images.pexels.com/photos/586415/pexels-photo-586415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2 2x'); /* Specify the path to your image */ 
-    background-size: cover; /* Ensures the image covers the entire header */ 
-    background-position: center; /* Centers the image within the header */ 
-    height: 100px; /* Set the height of the header as needed */ 
-    text-align: center; /* Optional: Aligns text/content within the header */ 
-    color: white; /* Optional: Text color */ 
-    font-size: 24px; /* Optional: Font size */ 
-    padding: 20px; /* Optional: Padding around content */ 
-  } 
+    background-image: url('https://images.pexels.com/photos/586415/pexels-photo-586415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 1x, https://images.pexels.com/photos/586415/pexels-photo-586415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2 2x'); /* Adds background image */
+    background-size: cover; /* Ensures the image covers the entire header */
+    background-position: center; /* Centers the image within the header */
+    height: 100px; /* Sets the height of the header */
+    text-align: center; /* Centers the text horizontally */
+    color: white; /* Sets the text color to white */
+    font-size: 24px; /* Sets the font size */
+    padding: 20px; /* Adds padding around the content */
+}
 
-/* Basic reset for margin and padding, and ensures consistent box sizing across elements */
-
+/* Body styling */
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Removes default padding */
+    box-sizing: border-box; /* Ensures padding and borders are included in element's width and height */
     background-color: black; /* Sets the background color of the body to black */
 }
 
-/* Styles the piano container */
+/* Piano container styling */
 .piano {
     display: flex; /* Makes the piano container a flexbox to align its contents */
     align-items: center; /* Vertically centers the piano keys within the container */
-    justify-content: center; /* Horizontally centers the piano keys within the container */
+    justify-content: center; /* Horizontally centers the piano keys */
 }
 
-/* Styles the list that contains all the piano keys */
+/* Styles for the list that contains all the piano keys */
 .piano-keys-list {
     list-style: none; /* Removes default bullet points from the list */
     display: flex; /* Displays list items (piano keys) in a row */
@@ -37,7 +37,7 @@ body {
 .piano-keys {
     width: 80px; /* Sets the width of each piano key */
     cursor: pointer; /* Changes the cursor to a pointer when hovering over a key */
-    position: relative; /* Allows for precise positioning of child elements (e.g., note text) */
+    position: relative; /* Allows for precise positioning of child elements */
     height: 300px; /* Sets the height of the piano key */
     border: 1px solid #000; /* Adds a black border to each key */
     
@@ -65,7 +65,7 @@ body {
     border-radius: 5px; /* Rounds the corners of the black keys */
     background-color: #000; /* Sets the background color of black keys to black */
     z-index: 2; /* Ensures black keys appear above white keys */
-    margin: 0 -20px 0 -20px; /* Adds negative margins to overlap black keys over white keys */
+    margin: 0 -20px; /* Adds negative margins to overlap black keys over white keys */
     align-items: flex-end; /* Aligns the text (note) at the bottom of the black key */
 }
 
@@ -81,38 +81,71 @@ body {
     color: white; /* Changes the text color to white for better visibility on black keys */
 }
 
-/*Button style for play Button */
+/* Play Button */
+.play-button {
+    width: 100px; /* Sets the width of the play button */
+    height: 100px; /* Sets the height of the play button */
+    border-radius: 50%; /* Makes the button circular */
+    background-color: white; /* Sets the background color of the button */
+    display: flex; /* Uses flexbox for centering the play icon inside the button */
+    justify-content: center; /* Horizontally centers the play icon */
+    align-items: center; /* Vertically centers the play icon */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow around the button */
+    position: absolute; /* Positions the button relative to its closest positioned ancestor */
+    top: 75%; /* Positions the button 75% from the top */
+    left: 50%; /* Positions the button at the horizontal center */
+    transform: translate(-50%, -50%); /* Offsets the button by 50% of its width and height for perfect centering */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling effect */
+}
+
+/* Play icon (triangle) styling */
+.play-button::before {
+    content: ""; /* Adds an empty content to create the triangle play icon */
+    border-left: 18px solid #333; /* Creates the right-facing triangle using borders */
+    border-top: 10px solid transparent; /* Top transparent part of the triangle */
+    border-bottom: 10px solid transparent; /* Bottom transparent part of the triangle */
+    margin-left: 5px; /* Adds some space to the left of the play icon */
+}
+
+/* Hover effect for play button */
+.play-button:hover {
+    transform: translate(-50%, -50%) scale(1.1); /* Scales the button on hover while maintaining its position */
+}
+
+/* Styled Button */
 .styled {
-    position: absolute;
-    transform: translate(-50%,-50%);
-    margin-right: -50%;
-    top: 75%;
-    left: 50%;
-    border: 0;
-    line-height: 2.5;
-    padding: 0 20px;
-    font-size: 1rem;
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 1px #000;
-    background-color: Green;
+    position: absolute; /* Positions the button absolutely */
+    transform: translate(-50%,-50%); /* Offsets the button to center it */
+    margin-right: -50%; /* Corrects the margin for proper positioning */
+    top: 75%; /* Positions the button 75% from the top */
+    left: 50%; /* Centers the button horizontally */
+    border: 0; /* Removes the button border */
+    line-height: 2.5; /* Sets the height of each line of text */
+    padding: 0 20px; /* Adds padding around the button */
+    font-size: 1rem; /* Sets the font size of the text */
+    text-align: center; /* Centers the text within the button */
+    color: #fff; /* Sets the text color to white */
+    text-shadow: 1px 1px 1px #000; /* Adds a shadow effect to the text */
+    background-color: Green; /* Sets the background color of the button to green */
     background-image: linear-gradient(
       to top left,
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.2) 30%,
       rgba(0, 0, 0, 0)
-    );
+    ); /* Adds a gradient effect to the button */
     box-shadow:
       inset 2px 2px 3px rgba(255, 255, 255, 0.6),
-      inset -2px -2px 3px rgba(0, 0, 0, 0.6);
-  }
+      inset -2px -2px 3px rgba(0, 0, 0, 0.6); /* Adds an inner shadow for depth */
+}
   
-  .styled:hover {
-    background-color: Green;
-  }
-  
-  .styled:active {
+/* Hover effect for styled button */
+.styled:hover {
+    background-color: Green; /* Keeps the background color green on hover */
+}
+
+/* Active state for styled button */
+.styled:active {
     box-shadow:
       inset -2px -2px 3px rgba(255, 255, 255, 0.6),
-      inset 2px 2px 3px rgba(0, 0, 0, 0.6);
-  }
+      inset 2px 2px 3px rgba(0, 0, 0, 0.6); /* Changes the shadow on active click */
+}
