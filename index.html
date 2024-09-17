@@ -1,53 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="template.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="http://unpkg.com/tone"></script>    
-    <title>Piano</title>
+    <meta charset="UTF-8" /> <!-- Set character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Set the viewport for responsive design -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" /> <!-- Ensure compatibility with older versions of Internet Explorer -->
+    <link rel="stylesheet" href="template.css" /> <!-- Link to external CSS file for styling -->
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Load Tailwind CSS from CDN -->
+    <script src="http://unpkg.com/tone"></script> <!-- Load Tone.js for sound synthesis -->
+    <title>Piano</title> <!-- Set the title of the webpage -->
   </head>
 
+  <!-- Header section with title -->
   <Header>
-    <h1>Piano Player</h1>
+    <h1>Piano Player</h1> <!-- Display title of the piano player -->
   </Header>
 
   <body>
+    <!-- Background image to create visual appeal -->
+    <p style="background-image: url('https://i2.pickpik.com/photos/301/334/337/piano-hands-music-instrument-preview.jpg');"></p>
+
+    <!-- Welcome text to greet visitors -->
     <h1>Welcome to My Website</h1>
+
+    <!-- Piano key container -->
     <div class="piano">
+      <!-- List of piano keys, each key is represented by an <li> element -->
       <ul class="piano-keys-list">
-          <li class="piano-keys white-key" id="key-note" data-key="01">F</li>
-          <li class="piano-keys black-key" id="key-note-black" data-key="02">F#</li>
-          <li class="piano-keys white-key" id="key-note" data-key="03">G</li>
-          <li class="piano-keys black-key" id="key-note-black" data-key="04">G#</li>
-          <li class="piano-keys white-key" id="key-note" data-key="05">A</li>
-          <li class="piano-keys black-key" id="key-note-black" data-key="06">A#</li>
-          <li class="piano-keys white-key" id="key-note" data-key="07">B</li>
-          <li class="piano-keys white-key" id="key-note" data-key="08">C</li>
-          <li class="piano-keys black-key" id="key-note-black" data-key="09">C#</li>
-          <li class="piano-keys white-key" id="key-note" data-key="10">D</li>
-          <li class="piano-keys black-key" id="key-note-black" data-key="11">D#</li>
-          <li class="piano-keys white-key" id="key-note" data-key="12">E</li>
-          <li class="piano-keys white-key" id="key-note" data-key="13">F</li>
-          <li class="piano-keys black-key" id="key-note-black" data-key="14">F#</li>
-          <li class="piano-keys white-key" id="key-note" data-key="15">G</li>
-          <li class="piano-keys black-key" id="key-note-black" data-key="16">G#</li>
-          <li class="piano-keys white-key" id="key-note" data-key="17">A</li>
-          <li class="piano-keys black-key" id="key-note-black" data-key="18">A#</li>
-          <li class="piano-keys white-key" id="key-note" data-key="19">B</li>
-          <li class="piano-keys white-key" id="key-note" data-key="20">C</li>
-          <li class="piano-keys black-key" id="key-note-black" data-key="21">C#</li>
-          <li class="piano-keys white-key" id="key-note" data-key="22">D</li>
-          <li class="piano-keys black-key" id="key-note-black" data-key="23">D#</li>
-          <li class="piano-keys white-key" id="key-note" data-key="24">E</li>
+          <!-- White and black keys with data-key attributes representing musical notes -->
+          <li class="piano-keys white-key" id="key-note" data-key="F4">F</li> <!-- White key for F4 note -->
+          <li class="piano-keys black-key" id="key-note-black" data-key="F#4">F#</li> <!-- Black key for F#4 note -->
+          <li class="piano-keys white-key" id="key-note" data-key="G4">G</li> <!-- White key for G4 note -->
+          <li class="piano-keys black-key" id="key-note-black" data-key="G#4">G#</li> <!-- Black key for G#4 note -->
+          <li class="piano-keys white-key" id="key-note" data-key="A4">A</li> <!-- White key for A4 note -->
+          <li class="piano-keys black-key" id="key-note-black" data-key="A#4">A#</li> <!-- Black key for A#4 note -->
+          <li class="piano-keys white-key" id="key-note" data-key="B4">B</li> <!-- White key for B4 note -->
+          <li class="piano-keys white-key" id="key-note" data-key="C5">C</li> <!-- White key for C5 note -->
+          <li class="piano-keys black-key" id="key-note-black" data-key="C#5">C#</li> <!-- Black key for C#5 note -->
+          <li class="piano-keys white-key" id="key-note" data-key="D5">D</li> <!-- White key for D5 note -->
+          <li class="piano-keys black-key" id="key-note-black" data-key="D5">D#</li> <!-- Black key for D#5 note -->
+          <li class="piano-keys white-key" id="key-note" data-key="E5">E</li> <!-- White key for E5 note -->
+          <li class="piano-keys white-key" id="key-note" data-key="F5">F</li> <!-- White key for F5 note -->
+          <li class="piano-keys black-key" id="key-note-black" data-key="F#5">F#</li> <!-- Black key for F#5 note -->
+          <li class="piano-keys white-key" id="key-note" data-key="G5">G</li> <!-- White key for G5 note -->
+          <li class="piano-keys black-key" id="key-note-black" data-key="G#5">G#</li> <!-- Black key for G#5 note -->
+          <li class="piano-keys white-key" id="key-note" data-key="A5">A</li> <!-- White key for A5 note -->
+          <li class="piano-keys black-key" id="key-note-black" data-key="A#5">A#</li> <!-- Black key for A#5 note -->
+          <li class="piano-keys white-key" id="key-note" data-key="B5">B</li> <!-- White key for B5 note -->
+          <li class="piano-keys white-key" id="key-note" data-key="C6">C</li> <!-- White key for C6 note -->
+          <li class="piano-keys black-key" id="key-note-black" data-key="C#6">C#</li> <!-- Black key for C#6 note -->
+          <li class="piano-keys white-key" id="key-note" data-key="D6">D</li> <!-- White key for D6 note -->
+          <li class="piano-keys black-key" id="key-note-black" data-key="D#6">D#</li> <!-- Black key for D#6 note -->
+          <li class="piano-keys white-key" id="key-note" data-key="E6">E</li> <!-- White key for E6 note -->
       </ul>
     </div>
 
-    <!-- Play Button -->
-    <button type="button" class="play-button"></button>
+    <!-- Display div where the played notes will appear -->
+    <div id="displayKeys"></div>
 
-    <script src="index.js"></script>
+    <!-- Play button to play back the stored notes -->
+    <button type="button" class="play-button"></button> <!-- Button with no text yet, but it will be styled and used to trigger playback -->
+
+    <!-- Clear button to clear the played notes and stored data -->
+    <button type="button" id="clear" class="clear-button"></button> <!-- Button with no text yet, but it will be styled and used to clear the notes -->
+
+    <!-- External JavaScript file to handle the piano functionality -->
+    <script src="index.js"></script> <!-- External JavaScript file for handling piano key events and playback functionality -->
+
+    <!-- External JavaScript file for managing user data (likely localStorage management) -->
+    <script src="userdata.js"></script> <!-- External JavaScript file for user data management (if required) -->
   </body>
 </html>
