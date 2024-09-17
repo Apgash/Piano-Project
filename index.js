@@ -37,5 +37,10 @@ document.querySelectorAll("div.piano-keys, li.piano-keys").forEach(key => {
 });
 });
 
+function clearLocalStorage() {
+    localStorage.clear();
+    displayKeys.textContent = "";
+}
 
+document.getElementById("clear").addEventListener("click", clearLocalStorage);
 
