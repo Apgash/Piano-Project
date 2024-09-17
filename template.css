@@ -16,10 +16,10 @@ body {
     padding: 0; /* Removes default padding */
     box-sizing: border-box; /* Ensures padding and borders are included in element's width and height */
     background-color: black; /* Sets the background color of the body to black */
-    background-image: url('https://i2.pickpik.com/photos/301/334/337/piano-hands-music-instrument-preview.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
+    background-image: url('https://i2.pickpik.com/photos/301/334/337/piano-hands-music-instrument-preview.jpg');/*Adds background image to the body*/
+    background-repeat: no-repeat; /*makes sure tha the image doesnt repeat it self if it doent fit*/
+    background-attachment: fixed; /*image is fixed within the viewport*/
+    background-size: 100% 100%; /* fits image to the entire body of the screen */
 }
 
 /* Piano container styling */
@@ -96,8 +96,8 @@ body {
     align-items: center; /* Vertically centers the play icon */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow around the button */
     position: absolute; /* Positions the button relative to its closest positioned ancestor */
-    top: 75%; /* Positions the button 75% from the top */
-    left: 50%; /* Positions the button at the horizontal center */
+    top: 80%; /* Positions the button 75% from the top */
+    left: 55%; /* Positions the button at the horizontal center */
     transform: translate(-50%, -50%); /* Offsets the button by 50% of its width and height for perfect centering */
     transition: transform 0.3s ease-in-out; /* Smooth transition for scaling effect */
 }
@@ -116,8 +116,34 @@ body {
     transform: translate(-50%, -50%) scale(1.1); /* Scales the button on hover while maintaining its position */
 }
 
+/* Clear Button */
+.clear-button {
+    width: 100px; /* Sets the width of the play button */
+    height: 100px; /* Sets the height of the play button */
+    background-color: white; /* Sets the background color of the button */
+    display: flex; /* Uses flexbox for centering the play icon inside the button */
+    justify-content: center; /* Horizontally centers the play icon */
+    align-items: center; /* Vertically centers the play icon */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow around the button */
+    position: absolute; /* Positions the button relative to its closest positioned ancestor */
+    top: 80%; /* Positions the button 75% from the top */
+    left: 45%; /* Positions the button at the horizontal center */
+    transform: translate(-50%, -50%); /* Offsets the button by 50% of its width and height for perfect centering */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling effect */
+}
+
+/* clear button text*/
+.clear-button::before {
+    content: "Clear"; /* Adds text to the button*/
+}
+
+/* Hover effect for play button */
+.clear-button:hover {
+    transform: translate(-50%, -50%) scale(1.1); /* Scales the button on hover while maintaining its position */
+}
+
 /* Styled Button */
-.styled {
+.styled button {
     position: absolute; /* Positions the button absolutely */
     transform: translate(-50%,-50%); /* Offsets the button to center it */
     margin-right: -50%; /* Corrects the margin for proper positioning */
