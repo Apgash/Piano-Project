@@ -69,7 +69,7 @@ body {
     border-radius: 5px; /* Rounds the corners of the black keys */
     background-color: #000; /* Sets the background color of black keys to black */
     z-index: 2; /* Ensures black keys appear above white keys */
-    margin: 0 -20px; /* Adds negative margins to overlap black keys over white keys */
+    margin: 0 -1.785714%; /* Adds negative margins to overlap black keys over white keys */
     align-items: flex-end; /* Aligns the text (note) at the bottom of the black key */
 }
 
@@ -80,10 +80,12 @@ body {
     color: black; /* Sets the text color to black (for white keys) */
 }
 
+
 /* Special styling for note text inside black keys */
 #key-note-black {
     color: white; /* Changes the text color to white for better visibility on black keys */
 }
+
 
 /* Play Button */
 .play-button {
@@ -97,7 +99,7 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow around the button */
     position: absolute; /* Positions the button relative to its closest positioned ancestor */
     top: 80%; /* Positions the button 75% from the top */
-    left: 45%; /* Positions the button at the horizontal center */
+    left: 35%; /* Positions the button at the horizontal center */
     transform: translate(-50%, -50%); /* Offsets the button by 50% of its width and height for perfect centering */
     transition: transform 0.3s ease-in-out; /* Smooth transition for scaling effect */
 }
@@ -127,7 +129,7 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow around the button */
     position: absolute; /* Positions the button relative to its closest positioned ancestor */
     top: 80%; /* Positions the button 75% from the top */
-    left: 55%; /* Positions the button at the horizontal center */
+    left: 65%; /* Positions the button at the horizontal center */
     transform: translate(-50%, -50%); /* Offsets the button by 50% of its width and height for perfect centering */
     transition: transform 0.3s ease-in-out; /* Smooth transition for scaling effect */
 }
@@ -187,3 +189,51 @@ body {
     font-size: 20px;
     color: white;
   }
+
+  @media screen and (max-width: 768px) {
+    header {
+        height: 50px; /* Reduces header height */
+        font-size: 20px; /* Reduces font size */
+        padding: 15px; /* Reduces padding */
+    }
+    .piano {
+        display: flex; /* Makes the piano container a flexbox to align its contents */
+        align-items: center; /* Vertically centers the piano keys within the container */
+        justify-content: center; /* Horizontally centers the piano keys */
+    }
+    .piano-keys {
+        width: 7.14286%;
+        cursor: pointer;
+        position: relative;
+        height: 175px;
+        border: 1px solid #000;
+    }
+
+    .black-key {
+        width: 3.5714143%;
+        height: 100px;
+        z-index: 2;
+    }
+
+    .play-button, .clear-button {
+        width: 100px; /* Reduces button size */
+        height: 100px; /* Reduces button size */
+    }
+
+    .play-button::before {
+        border-left: 14px solid #333; /* Adjusts play icon size */
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+    }
+
+    .clear-button::before {
+        font-size: 14px; /* Reduces font size of clear text */
+    }
+
+    .styled {
+        font-size: 0.9rem; /* Adjusts font size */
+        padding: 0 15px; /* Adjusts padding */
+    }
+
+}
+
