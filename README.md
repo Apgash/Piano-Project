@@ -1,7 +1,3 @@
-Here's a draft for your `README.md` file based on the provided code:
-
----
-
 # Piano Player Web App
 
 Welcome to the **Piano Player Web App**! This is an interactive piano application built with HTML, CSS, JavaScript, and [Tone.js](https://tonejs.github.io/). Users can play notes on a virtual piano, record the sequence, and replay the stored notes. The application uses **localStorage** to save played notes and offers a clear function to reset the sequence.
@@ -89,7 +85,3 @@ This web app uses the browser's `localStorage` to store the sequence of notes yo
 ## License
 
 This project is licensed under the MIT License. Feel free to use, modify, and distribute this code as per the terms of the license.
-
----
-
-This draft provides an overview of the project, explains its features, and offers instructions on how to run and use the app. You can modify the links (e.g., repository URL) and adjust as necessary to fit your needs.
